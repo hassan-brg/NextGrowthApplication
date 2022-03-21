@@ -1,0 +1,80 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="vanilla.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+     
+    <title>Test</title>
+</head>
+<body>
+    <div class="container">
+        <table class="table table-responsive-xl" id="table">
+          
+            <tr>
+              <th>ID</th>
+              <th>Date de création</th>
+              <th>Etat</th>
+              <th>Nom</th>
+              <th>Prénom</th>
+              <th>Nom d'utilisateur</th>
+              <th>Matricule</th>
+              <th>action</th>
+            </tr>
+        </table>
+        <table class="table table-responsive-sm">
+            <tr>
+                <td><button class="btn btn-warning" id="buttonAddUser" onclick="displayAddUserForm()">Ajouter utilisateur</button> </td>
+            </tr>
+        </table>
+        <div id="addUserForm">
+            <div class="row">
+                <div class="col">
+                    <h1>Ajout utilisateurs</h1>
+                </div>
+                <div class="col">
+                    <span><i class="fa fa-times" aria-hidden="true" onclick="hideAddUserForm()"></i></span>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label>Nom</label>
+                    <input type="text" class="form-control" id="nom" placeholder="Nom">
+                </div>
+                <div class="form-group col-md-4">
+                    <label >Prénom</label>
+                    <input type="text" class="form-control" id="prenom" placeholder="Prénom">
+                </div>
+                <div class="form-group col-md-4">
+                    <label >Etat</label>
+                    <select class="form-control" id="etat">
+                        <option value="Validé">Validé</option>
+                        <option value="En validation">En validation</option>
+                        <option value="Rejeté">Rejeté</option>
+                      </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label >Nom d'utilisateur</label>
+                    <input type="text" class="form-control" id="username" placeholder="Nom d'utilisateur">
+                </div>
+                <div class="form-group col-md-4">
+                    <label>Date de création</label>
+                    <input type="date" class="form-control" id="dateDeCreation" placeholder="Date de création">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label>Matricule</label>
+                    <input type="text" class="form-control" id="matricule" placeholder="Matricule">
+                </div>    
+            </div>
+            <button type="submit" class="btn btn-warning" onclick="addUser()">Enregistrer</button>
+              
+        </div>
+      </div>
+</body>
+</html>
